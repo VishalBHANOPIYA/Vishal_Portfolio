@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background:#020617;
+  color:white;
+}
+.hero-grid{
+  background-color:#020617;
+
+  background-image:
+  linear-gradient(rgba(0,255,255,0.1) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0,255,255,0.1) 1px, transparent 1px);
+
+  background-size:40px 40px;
+}
+html{
+  scroll-behavior:smooth;
+}
+.section-divider{
+height:1px;
+background:linear-gradient(
+90deg,
+transparent,
+#06b6d4,
+transparent
+);
+margin:80px auto;
+width:70%;
+}
+html{
+  scroll-behavior:smooth;
+}
+.glow-btn{
+  transition: all 0.3s ease;
+}
+
+.glow-btn:hover{
+  box-shadow:0 0 15px #06b6d4;
+}
