@@ -1,35 +1,75 @@
-export default function GithubStats(){
+import { motion } from "framer-motion"
 
-return(
+export default function GithubStats() {
+  return (
+    <section id="github" className="py-32 text-white text-center relative overflow-hidden">
 
-<section
-id="github"
-className="py-32 text-white text-center relative z-10"
->
+      {/* Ambient glow */}
+      <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none" />
 
-<h2 className="text-5xl font-bold text-cyan-400 mb-16">
-GitHub Stats
-</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="section-heading"
+      >
+        GitHub Stats
+      </motion.h2>
 
-<div className="flex flex-col items-center gap-10 max-w-4xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, staggerChildren: 0.2 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center gap-8 max-w-4xl mx-auto px-6"
+      >
+        {/* Profile Details Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="glass-card p-3 w-full max-w-3xl"
+        >
+          <img
+            src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=VishalBHANOPIYA&theme=tokyonight"
+            className="rounded-lg w-full"
+            alt="GitHub Profile Details"
+          />
+        </motion.div>
 
-<img
-src="https://github-readme-stats.vercel.app/api?username=VishalBHANOPIYA&show_icons=true&theme=tokyonight&hide_border=true"
-className="rounded-xl"
-/>
+        {/* Bottom row — two cards side by side */}
+        <div className="grid md:grid-cols-2 gap-8 w-full max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="glass-card p-3"
+          >
+            <img
+              src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=VishalBHANOPIYA&theme=tokyonight"
+              className="rounded-lg w-full"
+              alt="Top Languages"
+            />
+          </motion.div>
 
-<img
-src="https://github-readme-stats.vercel.app/api/top-langs/?username=VishalBHANOPIYA&layout=compact&theme=tokyonight&hide_border=true"
-/>
-
-<img
-src="https://streak-stats.demolab.com?user=VishalBHANOPIYA&theme=tokyonight&hide_border=true"
-/>
-
-</div>
-
-</section>
-
-)
-
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="glass-card p-3"
+          >
+            <img
+              src="https://streak-stats.demolab.com?user=VishalBHANOPIYA&theme=tokyonight&hide_border=true"
+              className="rounded-lg w-full"
+              alt="GitHub Streak"
+            />
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  )
 }

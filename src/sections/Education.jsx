@@ -1,46 +1,76 @@
 import { motion } from "framer-motion"
+import { FaGraduationCap } from "react-icons/fa"
 
-export default function Education(){
+export default function Education() {
+  return (
+    <section id="education" className="py-32 text-white relative overflow-hidden">
 
-return(
+      <div className="absolute right-1/4 top-10 w-[400px] h-[300px] bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-<section id="education" className="py-32 text-white text-center">
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="section-heading text-center"
+      >
+        Education
+      </motion.h2>
 
-<h2 className="text-5xl font-bold text-cyan-400 mb-16">
-Education
-</h2>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="max-w-3xl mx-auto px-6"
+      >
+        <div className="glass-card p-8 relative overflow-hidden">
 
-<motion.div
-initial={{opacity:0,y:80}}
-whileInView={{opacity:1,y:0}}
-transition={{duration:0.8}}
-viewport={{once:true}}
-className="border border-cyan-400 p-10 rounded-xl max-w-3xl mx-auto bg-black/40 backdrop-blur-md"
->
+          {/* Top accent line */}
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-400 to-purple-500" />
 
-<h3 className="text-2xl font-bold mb-2">
-Chameli Devi Group of Institutions
-</h3>
+          <div className="flex flex-col md:flex-row gap-6 items-start">
 
-<p className="text-cyan-400 mb-2">
-B.Tech – Computer Science & Engineering
-</p>
+            {/* Icon */}
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400/20 to-purple-500/20 border border-cyan-400/20 flex items-center justify-center flex-shrink-0">
+              <FaGraduationCap className="text-3xl text-cyan-400" />
+            </div>
 
-<p className="text-gray-400 mb-6">
-2023 – 2027 | Indore, Madhya Pradesh
-</p>
+            <div className="flex-1">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
+                <h3 className="text-xl font-bold text-white">
+                  Chameli Devi Group of Institutions
+                </h3>
+                <span className="px-3 py-1 text-xs font-semibold rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 tracking-wide">
+                  2023 – 2027
+                </span>
+              </div>
 
-<p className="text-gray-300">
+              <p className="text-cyan-300 font-semibold mb-1">
+                B.Tech – Computer Science &amp; Engineering
+              </p>
 
-Relevant Coursework: Data Structures, Object-Oriented Programming,
-Computer Organization & Architecture.
+              <p className="text-gray-400 text-sm mb-4">
+                Indore, Madhya Pradesh
+              </p>
 
-</p>
-
-</motion.div>
-
-</section>
-
-)
-
+              <div className="border-t border-white/5 pt-4">
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Relevant Coursework</p>
+                <div className="flex flex-wrap gap-2">
+                  {["Data Structures", "OOP", "Computer Architecture", "DBMS", "Operating Systems", "Algorithms"].map((c) => (
+                    <span
+                      key={c}
+                      className="px-3 py-1 text-xs rounded-full border border-purple-400/20 bg-purple-400/5 text-purple-300"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  )
 }

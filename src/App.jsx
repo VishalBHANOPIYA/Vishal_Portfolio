@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
 
-import Navbar from "/home/vish/ Vishal-portfolio/vishal-portfolio/src/ components/Navbar.jsx"
-import Footer from "/home/vish/ Vishal-portfolio/vishal-portfolio/src/ components/Footer.jsx"
-import Loader from "/home/vish/ Vishal-portfolio/vishal-portfolio/src/ components/Loader.jsx"
-import CursorTrail from "/home/vish/ Vishal-portfolio/vishal-portfolio/src/ components/CursorTrail.jsx"
-import Background3D from "/home/vish/ Vishal-portfolio/vishal-portfolio/src/ components/Background3D.jsx"
-import ParticlesBackground from "/home/vish/ Vishal-portfolio/vishal-portfolio/src/ components/ParticlesBackground.jsx"
-import ScrollBar from "/home/vish/ Vishal-portfolio/vishal-portfolio/src/ components/ScrollBar.jsx"
+import Navbar from "./components/Navbar.jsx"
+import Footer from "./components/Footer.jsx"
+import Loader from "./components/Loader.jsx"
+import CursorTrail from "./components/CursorTrail.jsx"
+
+import ParticlesBackground from "./components/ParticlesBackground.jsx"
+import ScrollBar from "./components/ScrollBar.jsx"
 import Hero from "./sections/Hero"
 import Skills from "./sections/Skills"
 import Projects from "./sections/Projects"
@@ -42,7 +42,7 @@ return(
 
 <ParticlesBackground/>
 
-<Background3D/>
+
 
 <Navbar/>
 
