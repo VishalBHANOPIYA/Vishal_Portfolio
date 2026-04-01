@@ -105,7 +105,7 @@ export default function Hero() {
 
             <a
               href="/resume.pdf"
-              download
+              download="Vishal_Bhanopiya_Resume.pdf"
               className="glow-btn flex items-center gap-2 px-6 py-3 bg-white/5 border border-purple-400/40 backdrop-blur-md text-white font-semibold rounded-xl hover:border-purple-400 hover:bg-purple-400/10 transition"
             >
               <FaDownload className="text-lg text-purple-400" />
